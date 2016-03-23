@@ -10,17 +10,19 @@ function getProperty(object, key) {
   }
 }
 
-module.exports = function propDeep(object, key) {
-  if (typeof object === 'undefined') {
-    throw new Error('object is required');
-  }
-
+module.exports = function propDeep(key, object) {
   if (typeof key === 'undefined') {
     throw new Error('key is required');
   }
 
   if (typeof key === 'string') {
     key = key.split('.');
+  }
+
+  if (typeof object === 'undefined') {
+    return function propDeepCurried(object) {
+      return propDeep(key, object);
+    }
   }
 
   if (hasKeyDeep(object, key)) {
