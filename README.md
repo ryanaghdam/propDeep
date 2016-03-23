@@ -68,5 +68,5 @@ propDeep('a.b')(object);
 
 Changelog
 ---------
-
+v2.0.0: Reverses argument order.  Adds support for partial application.
 v1.0.0: First release
