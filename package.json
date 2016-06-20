@@ -1,6 +1,6 @@
 {
   "name": "prop-deep",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Returns the given deeply-nested property of an object using dot-notation or an array of keys",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,6 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "has-key-deep": "^1.0.0"
+    "has-key-deep": "^2.1.0"
   }
 }
