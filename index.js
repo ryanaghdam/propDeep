@@ -25,7 +25,7 @@ module.exports = function propDeep(key, object) {
     }
   }
 
-  if (hasKeyDeep(object, key)) {
+  if (hasKeyDeep(key, object)) {
     return getProperty(object, key);
   }
 };
