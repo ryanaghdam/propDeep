@@ -4,7 +4,10 @@
   "description": "Returns the given deeply-nested property of an object using dot-notation or an array of keys",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "patch-release": "npm test && npm version patch && npm publish && git push --follow-tags",
+    "minor-release": "npm test && npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm test && npm version major && npm publish && git push --follow-tags"
   },
   "author": "Ryan Aghdam <ryan@ryanaghdam.com>",
   "license": "MIT",
@@ -13,5 +16,13 @@
   },
   "dependencies": {
     "has-key-deep": "^2.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanaghdam/propDeep/issues",
+    "email": "ryan@ryanaghdam.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanaghdam/propDeep.git"
   }
 }

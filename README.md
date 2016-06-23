@@ -68,5 +68,9 @@ propDeep('a.b')(object);
 
 Changelog
 ---------
+
+- v2.1.2: Adds NPM scripts for releasing and GitHub link in `package.json`. (6/23/16)
+- v2.1.1: fixes compatibility with new has-prop-deep. (6/20/16)
+- v2.1.0: Updates `has-key-deep` dependecy to `^2.1.0`. (6/20/16)
 - v2.0.0: Reverses argument order.  Adds support for partial application.
 - v1.0.0: First release
