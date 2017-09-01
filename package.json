@@ -2,9 +2,12 @@
   "name": "prop-deep",
   "version": "2.1.2",
   "description": "Returns the given deeply-nested property of an object using dot-notation or an array of keys",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha",
+    "build": "babel src --out-dir lib",
+    "pretest": "npm run build",
+    "test": "mocha ./lib/test.js",
+    "prepublish": "npm build",
     "patch-release": "npm test && npm version patch && npm publish && git push --follow-tags",
     "minor-release": "npm test && npm version minor && npm publish && git push --follow-tags",
     "major-release": "npm test && npm version major && npm publish && git push --follow-tags"
@@ -12,9 +15,12 @@
   "author": "Ryan Aghdam <ryan@ryanaghdam.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "mocha": "^2.4.5"
   },
   "dependencies": {
+    "auto-curry": "^0.2.1",
     "has-key-deep": "^2.1.0"
   },
   "bugs": {

@@ -69,6 +69,7 @@ propDeep('a.b')(object);
 Changelog
 ---------
 
+- v3.0.0: Re-written with ES6 and auto-curry. No error on invalid input. (8/29/17)
 - v2.1.2: Adds NPM scripts for releasing and GitHub link in `package.json`. (6/23/16)
 - v2.1.1: fixes compatibility with new has-prop-deep. (6/20/16)
 - v2.1.0: Updates `has-key-deep` dependecy to `^2.1.0`. (6/20/16)
