@@ -19,19 +19,19 @@ describe('propDeep()', () => {
 
     describe('valid input, property does not exist', () => {
       context('key provided in dot notation', () => {
-        it('should return undefined ', () => {
+        it('should return undefined', () => {
           equal(propDeep('a.b.c.', {}), undefined, 'expected undefined');
         });
       });
 
       context('key provided in array notation', () => {
-        it('should return undefined ', () => {
+        it('should return undefined', () => {
           equal(propDeep(['a','b'], {}), undefined, 'expected undefined');
         });
       });
 
       context('earlier key is undefined', () => {
-        it('should return undefined ', () => {
+        it('should return undefined', () => {
           equal(propDeep(['a', 'b', 'c'], { a: undefined }), undefined, 'expected undefined');
         });
       });
@@ -65,19 +65,19 @@ describe('propDeep()', () => {
 
     describe('valid input, property does not exist', () => {
       context('key provided in dot notation', () => {
-        it('should return undefined ', () => {
+        it('should return undefined', () => {
           equal(propDeep('a.b.c')({}), undefined, 'expected undefined');
         });
       });
 
       context('key provided in array notation', () => {
-        it('should return undefined ', () => {
+        it('should return undefined', () => {
           equal(propDeep(['a','b'])({}), undefined, 'expected undefined');
         });
       });
 
       context('earlier key is undefined', () => {
-        it('should return undefined ', () => {
+        it('should return undefined', () => {
           equal(propDeep(['a', 'b', 'c'])({ a: undefined }), undefined, 'expected undefined');
         });
       });
